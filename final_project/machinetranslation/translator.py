@@ -2,9 +2,9 @@
 Import module
 """
 import json
+import os
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -12,13 +12,13 @@ load_dotenv()
 apikey = os.environ['apikey']
 url = os.environ['url']
 
-authenticator = IAMAuthenticator('CwA6OfUxZlUzy4RCTby9q-0M3ga1tIgay-LqpUaOo5V-')
+authenticator = IAMAuthenticator('RHYkFh2HdHmKy8vVtUmbslUHWsmk0YNo_fLkraXxQ9nT')
 language_translator = LanguageTranslatorV3(
     version='2018-05-01',
     authenticator=authenticator
 )
 
-language_translator.set_service_url('https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/21138319-838a-4440-8c34-8e6c540cba86')
+language_translator.set_service_url('https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/d95479f2-27fe-41ba-805f-4889d26afa4b')
 
 def english_to_french(english_text):
     """
